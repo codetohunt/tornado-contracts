@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as dummySol from "./Dummy.sol";
+export * as mockGovernanceForStakingSol from "./MockGovernanceForStaking.sol";
 export * as proposalStateChangeGovernanceSol from "./ProposalStateChangeGovernance.sol";
 export * as proposalUpgradeSol from "./ProposalUpgrade.sol";
 export { MockGovernance__factory } from "./MockGovernance__factory";

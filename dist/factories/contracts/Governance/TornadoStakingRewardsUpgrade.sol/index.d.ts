@@ -1,0 +1,3 @@
+export { ITornadoGovernance__factory } from "./ITornadoGovernance__factory";
+export { ITornadoVault__factory } from "./ITornadoVault__factory";
+export { TornadoStakingRewardsUpgrade__factory } from "./TornadoStakingRewardsUpgrade__factory";

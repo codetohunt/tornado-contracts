@@ -9,6 +9,8 @@
     "types": "tsc -p tsconfig.types.json --declaration --emitDeclarationOnly",
     "compile": "hardhat clean && hardhat compile && hardhat flatten:all",
     "build": "yarn compile && yarn types && rollup -c",
+    "test": "hardhat test test/FeeSplitUpgrade.test.ts",
+    "test:fork": "hardhat test test/MainnetFork.test.ts",
     "deploy": "hardhat run ./scripts/deploy.ts",
     "lint": "eslint . --ext .ts --fix"
   },

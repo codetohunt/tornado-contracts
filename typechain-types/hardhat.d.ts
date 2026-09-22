@@ -206,6 +206,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.LoopbackProxy__factory>;
     getContractFactory(
+      name: "FeeSplitProposal",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.FeeSplitProposal__factory>;
+    getContractFactory(
       name: "IENS",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IENS__factory>;
@@ -302,6 +306,18 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TornadoStakingRewards__factory>;
     getContractFactory(
+      name: "ITornadoGovernance",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ITornadoGovernance__factory>;
+    getContractFactory(
+      name: "ITornadoVault",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ITornadoVault__factory>;
+    getContractFactory(
+      name: "TornadoStakingRewardsUpgrade",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.TornadoStakingRewardsUpgrade__factory>;
+    getContractFactory(
       name: "TornadoVault",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TornadoVault__factory>;
@@ -365,6 +381,14 @@ declare module "hardhat/types/runtime" {
       name: "MockGovernance",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MockGovernance__factory>;
+    getContractFactory(
+      name: "ITornadoVault",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ITornadoVault__factory>;
+    getContractFactory(
+      name: "MockGovernanceForStaking",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MockGovernanceForStaking__factory>;
     getContractFactory(
       name: "Proposal",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -687,6 +711,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.LoopbackProxy>;
     getContractAt(
+      name: "FeeSplitProposal",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.FeeSplitProposal>;
+    getContractAt(
       name: "IENS",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -807,6 +836,21 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.TornadoStakingRewards>;
     getContractAt(
+      name: "ITornadoGovernance",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ITornadoGovernance>;
+    getContractAt(
+      name: "ITornadoVault",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ITornadoVault>;
+    getContractAt(
+      name: "TornadoStakingRewardsUpgrade",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.TornadoStakingRewardsUpgrade>;
+    getContractAt(
       name: "TornadoVault",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -886,6 +930,16 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.MockGovernance>;
+    getContractAt(
+      name: "ITornadoVault",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ITornadoVault>;
+    getContractAt(
+      name: "MockGovernanceForStaking",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MockGovernanceForStaking>;
     getContractAt(
       name: "Proposal",
       address: string | ethers.Addressable,
@@ -1180,6 +1234,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.LoopbackProxy>;
     deployContract(
+      name: "FeeSplitProposal",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.FeeSplitProposal>;
+    deployContract(
       name: "IENS",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IENS>;
@@ -1276,6 +1334,18 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TornadoStakingRewards>;
     deployContract(
+      name: "ITornadoGovernance",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ITornadoGovernance>;
+    deployContract(
+      name: "ITornadoVault",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ITornadoVault>;
+    deployContract(
+      name: "TornadoStakingRewardsUpgrade",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.TornadoStakingRewardsUpgrade>;
+    deployContract(
       name: "TornadoVault",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TornadoVault>;
@@ -1339,6 +1409,14 @@ declare module "hardhat/types/runtime" {
       name: "MockGovernance",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.MockGovernance>;
+    deployContract(
+      name: "ITornadoVault",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ITornadoVault>;
+    deployContract(
+      name: "MockGovernanceForStaking",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.MockGovernanceForStaking>;
     deployContract(
       name: "Proposal",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -1661,6 +1739,11 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.LoopbackProxy>;
     deployContract(
+      name: "FeeSplitProposal",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.FeeSplitProposal>;
+    deployContract(
       name: "IENS",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -1781,6 +1864,21 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TornadoStakingRewards>;
     deployContract(
+      name: "ITornadoGovernance",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ITornadoGovernance>;
+    deployContract(
+      name: "ITornadoVault",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ITornadoVault>;
+    deployContract(
+      name: "TornadoStakingRewardsUpgrade",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.TornadoStakingRewardsUpgrade>;
+    deployContract(
       name: "TornadoVault",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -1860,6 +1958,16 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.MockGovernance>;
+    deployContract(
+      name: "ITornadoVault",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ITornadoVault>;
+    deployContract(
+      name: "MockGovernanceForStaking",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.MockGovernanceForStaking>;
     deployContract(
       name: "Proposal",
       args: any[],

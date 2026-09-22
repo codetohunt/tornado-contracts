@@ -10,3 +10,4 @@ node_modules
 /coverage.json
 
 /flatten
+.DS_Store

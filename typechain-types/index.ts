@@ -92,6 +92,8 @@ export type { IERC20Decimals } from "./contracts/Governance/libraries/UniswapV3O
 export { IERC20Decimals__factory } from "./factories/contracts/Governance/libraries/UniswapV3OracleHelper.sol/IERC20Decimals__factory";
 export type { LoopbackProxy } from "./contracts/Governance/LoopbackProxy";
 export { LoopbackProxy__factory } from "./factories/contracts/Governance/LoopbackProxy__factory";
+export type { FeeSplitProposal } from "./contracts/Governance/proposals/FeeSplitProposal";
+export { FeeSplitProposal__factory } from "./factories/contracts/Governance/proposals/FeeSplitProposal__factory";
 export type { IENS } from "./contracts/Governance/RelayerRegistry.sol/IENS";
 export { IENS__factory } from "./factories/contracts/Governance/RelayerRegistry.sol/IENS__factory";
 export type { IFeeManager } from "./contracts/Governance/RelayerRegistry.sol/IFeeManager";
@@ -140,6 +142,8 @@ export type { ITornadoVault } from "./contracts/Governance/TornadoStakingRewards
 export { ITornadoVault__factory } from "./factories/contracts/Governance/TornadoStakingRewards.sol/ITornadoVault__factory";
 export type { TornadoStakingRewards } from "./contracts/Governance/TornadoStakingRewards.sol/TornadoStakingRewards";
 export { TornadoStakingRewards__factory } from "./factories/contracts/Governance/TornadoStakingRewards.sol/TornadoStakingRewards__factory";
+export type { TornadoStakingRewardsUpgrade } from "./contracts/Governance/TornadoStakingRewardsUpgrade.sol/TornadoStakingRewardsUpgrade";
+export { TornadoStakingRewardsUpgrade__factory } from "./factories/contracts/Governance/TornadoStakingRewardsUpgrade.sol/TornadoStakingRewardsUpgrade__factory";
 export type { TornadoVault } from "./contracts/Governance/TornadoVault";
 export { TornadoVault__factory } from "./factories/contracts/Governance/TornadoVault__factory";
 export type { IUniswapV3Factory } from "./contracts/Governance/Uniswap/v3-core/contracts/interfaces/IUniswapV3Factory";
@@ -172,6 +176,8 @@ export type { DummySecond } from "./contracts/Governance/v1/Mocks/Dummy.sol/Dumm
 export { DummySecond__factory } from "./factories/contracts/Governance/v1/Mocks/Dummy.sol/DummySecond__factory";
 export type { MockGovernance } from "./contracts/Governance/v1/Mocks/MockGovernance";
 export { MockGovernance__factory } from "./factories/contracts/Governance/v1/Mocks/MockGovernance__factory";
+export type { MockGovernanceForStaking } from "./contracts/Governance/v1/Mocks/MockGovernanceForStaking.sol/MockGovernanceForStaking";
+export { MockGovernanceForStaking__factory } from "./factories/contracts/Governance/v1/Mocks/MockGovernanceForStaking.sol/MockGovernanceForStaking__factory";
 export type { Proposal } from "./contracts/Governance/v1/Mocks/Proposal";
 export { Proposal__factory } from "./factories/contracts/Governance/v1/Mocks/Proposal__factory";
 export type { IGovernance } from "./contracts/Governance/v1/Mocks/ProposalStateChangeGovernance.sol/IGovernance";

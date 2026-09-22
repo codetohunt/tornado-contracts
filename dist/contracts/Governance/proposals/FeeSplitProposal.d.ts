@@ -1,0 +1,33 @@
+import type { BaseContract, BytesLike, FunctionFragment, Result, Interface, ContractRunner, ContractMethod, Listener } from "ethers";
+import type { TypedContractEvent, TypedDeferredTopicFilter, TypedEventLog, TypedListener, TypedContractMethod } from "../../../common";
+export interface FeeSplitProposalInterface extends Interface {
+    getFunction(nameOrSignature: "executeProposal" | "newImplementation" | "stakingProxy"): FunctionFragment;
+    encodeFunctionData(functionFragment: "executeProposal", values?: undefined): string;
+    encodeFunctionData(functionFragment: "newImplementation", values?: undefined): string;
+    encodeFunctionData(functionFragment: "stakingProxy", values?: undefined): string;
+    decodeFunctionResult(functionFragment: "executeProposal", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "newImplementation", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "stakingProxy", data: BytesLike): Result;
+}
+export interface FeeSplitProposal extends BaseContract {
+    connect(runner?: ContractRunner | null): FeeSplitProposal;
+    waitForDeployment(): Promise<this>;
+    interface: FeeSplitProposalInterface;
+    queryFilter<TCEvent extends TypedContractEvent>(event: TCEvent, fromBlockOrBlockhash?: string | number | undefined, toBlock?: string | number | undefined): Promise<Array<TypedEventLog<TCEvent>>>;
+    queryFilter<TCEvent extends TypedContractEvent>(filter: TypedDeferredTopicFilter<TCEvent>, fromBlockOrBlockhash?: string | number | undefined, toBlock?: string | number | undefined): Promise<Array<TypedEventLog<TCEvent>>>;
+    on<TCEvent extends TypedContractEvent>(event: TCEvent, listener: TypedListener<TCEvent>): Promise<this>;
+    on<TCEvent extends TypedContractEvent>(filter: TypedDeferredTopicFilter<TCEvent>, listener: TypedListener<TCEvent>): Promise<this>;
+    once<TCEvent extends TypedContractEvent>(event: TCEvent, listener: TypedListener<TCEvent>): Promise<this>;
+    once<TCEvent extends TypedContractEvent>(filter: TypedDeferredTopicFilter<TCEvent>, listener: TypedListener<TCEvent>): Promise<this>;
+    listeners<TCEvent extends TypedContractEvent>(event: TCEvent): Promise<Array<TypedListener<TCEvent>>>;
+    listeners(eventName?: string): Promise<Array<Listener>>;
+    removeAllListeners<TCEvent extends TypedContractEvent>(event?: TCEvent): Promise<this>;
+    executeProposal: TypedContractMethod<[], [void], "nonpayable">;
+    newImplementation: TypedContractMethod<[], [string], "view">;
+    stakingProxy: TypedContractMethod<[], [string], "view">;
+    getFunction<T extends ContractMethod = ContractMethod>(key: string | FunctionFragment): T;
+    getFunction(nameOrSignature: "executeProposal"): TypedContractMethod<[], [void], "nonpayable">;
+    getFunction(nameOrSignature: "newImplementation"): TypedContractMethod<[], [string], "view">;
+    getFunction(nameOrSignature: "stakingProxy"): TypedContractMethod<[], [string], "view">;
+    filters: {};
+}
